@@ -1,0 +1,26 @@
+/* 展开动画 */
+.cart-content {
+    /* transform: translateX(100%); */
+    transition: transform 0.3s ease-out;
+}
+
+.cart-content.show {
+    transform: translateX(0);
+}
+
+/* 商品入场动画 */
+@keyframes itemEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cart-item {
+    animation: itemEnter 0.3s ease-in forwards;
+}
